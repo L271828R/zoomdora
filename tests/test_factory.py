@@ -1,4 +1,4 @@
-from flaskr import create_app
+from zoomdora import create_app
 
 
 def test_config():
