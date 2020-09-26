@@ -4,6 +4,14 @@ html {
   padding: 1rem;
 }
 
+div.show_category {
+    display: block;    
+    border: 1px solid lightgrey;
+    margin: 5px;
+    text-align: center;
+    width: 70px;
+}
+
 body {
   max-width: 960px;
   margin: 0 auto;
@@ -99,6 +107,13 @@ nav ul li a, nav ul li span, header .action {
 .post .body {
   white-space: pre-line;
 }
+
+
+select#cat {
+  white-space: pre-line;
+  margin-bottom: 10px; 
+}
+
 
 .content:last-child {
   margin-bottom: 0;

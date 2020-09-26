@@ -5,7 +5,7 @@ DROP TABLE IF EXISTS user_profile_ref;
 DROP TABLE IF EXISTS profile;
 DROP TABLE IF EXISTS categories;
 DROP TABLE IF EXISTS country_code;
-DROP TABLE IF EXISTS payment_method;
+DROP TABLE IF EXISTS payment_methods;
 
 CREATE TABLE user (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -22,6 +22,7 @@ CREATE TABLE post (
   created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   title TEXT NOT NULL,
   body TEXT NOT NULL,
+  category TEXT NOT NULL,
   FOREIGN KEY (author_id) REFERENCES user (id)
 );
 
