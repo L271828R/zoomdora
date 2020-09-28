@@ -1,7 +1,57 @@
+.xnavbar-nav {
+    float:none;
+    margin:0 auto;
+    display: block;
+    text-align: center;
+}
+
+.xnavbar-nav > li {
+    display: inline-block;
+    float:none;
+}
+
+
+section.content {
+    border-style: solid;
+    margin-top: 50px;
+    border-width: 2px;
+    border-bottom-width: 2px;
+    border-color: #e9e1e1;
+}
+
+
+
+#mynav 
+{
+   top: 0px;
+   margin:0px;  
+   padding-top: 18px;
+   padding: 0px 2px 2px 3px;    
+   border-width: 2px;
+   border-bottom-width:2px;
+   border-bottom-color:#e9e1e1;
+   border-bottom-style: solid;
+   width: 100%;
+   background: #f8f9fa;
+}
+
+#logo {
+}
+
+#mynav_child 
+{
+  display: flex;
+  justify-content: center;
+}
+
+input.form-control { width: 400px!important; }
+
 html {
-  font-family: sans-serif;
+  font-family: "Gotham SSm",Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"
   background: #eee;
-  padding: 1rem;
+  /*padding-right: 1rem;
+  padding-left: 1rem;
+  padding-bottom: 1rem;*/
 }
 
 div.show_category {
@@ -12,10 +62,14 @@ div.show_category {
     width: 70px;
 }
 
+div.company_name {
+  font-family: serif;
+  font-size: 0.95em;
+}
+
+
 body {
-  max-width: 960px;
-  margin: 0 auto;
-  background: white;
+  background: lightgrey;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -31,35 +85,6 @@ a {
 hr {
   border: none;
   border-top: 1px solid lightgray;
-}
-
-nav {
-  background: lightgray;
-  display: flex;
-  align-items: center;
-  padding: 0 0.5rem;
-}
-
-nav h1 {
-  flex: auto;
-  margin: 0;
-}
-
-nav h1 a {
-  text-decoration: none;
-  padding: 0.25rem 0.5rem;
-}
-
-nav ul  {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-nav ul li a, nav ul li span, header .action {
-  display: block;
-  padding: 0.5rem;
 }
 
 .content {
