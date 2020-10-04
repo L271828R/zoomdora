@@ -76,14 +76,6 @@ def get_post(id, check_author=True):
 @login_required
 def update(id):
     post = get_post(id)
-    print("post==", post)
-    print(post[0])
-    print(post[1])
-    print(post[2])
-    print(post[3])
-    print(post[4])
-    print(post[5])
-    print(post[6])
 
     if request.method == 'POST':
         title = request.form['title']
