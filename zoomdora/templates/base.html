@@ -12,11 +12,12 @@
         <!--div class="container-fullwidth"-->
         {% include 'nav_base.html' %}
         <div class="container">
+            <header>
+              {% block header_1 %}{% endblock %}
+            </header>
+        </div>
+        <div class="container">
             <section class="content">
-              <header>
-                {% block content_head %}{% endblock %}
-                {% block header %}{% endblock %}
-              </header>
               {% for message in get_flashed_messages() %}
                 <div class="flash">{{ message }}</div>
               {% endfor %}
