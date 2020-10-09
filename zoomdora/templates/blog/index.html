@@ -1,5 +1,33 @@
 {% extends 'base.html' %}
 
+
+{% block style %}
+<style>
+    .post_a_video_button {
+        border: black;
+        border-width: 1px;
+        border-style: solid;
+        background: #36A000;
+        text-align: center;
+        margin-top: 40px;
+        max-width: 135px;
+        padding: 10px;
+        color:white;
+        -moz-box-shadow: 0 0 3px #ccc;
+        -webkit-box-shadow: 0 0 3px #ccc;
+        box-shadow: 0 0 3px #ccc;
+    }
+</style>
+{% endblock %}
+
+{% block post_button %}
+    <a class="action" href="{{ url_for('blog.create') }}">
+        <div class="post_a_video_button">
+            <span> Post a Job </span>
+        </div>
+    </a>
+{% endblock %}
+
 {% block header_1 %}
   <div id="my_posting">
       {% block title %}My Posting{% endblock %}
@@ -26,9 +54,9 @@
       <p class="body">
         {{ post['body'] }}
       </p> 
-      <div class="show_category">
+      <span class="badge badge-secondary">
         {{ post['category'] }}
-      </div>
+      </span>
     </article>
     {% if not loop.last %}
       <hr>

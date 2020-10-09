@@ -1,27 +1,56 @@
-{% extends 'base.html' %}
-
-{% block header %}
-  <h1>{% block title %}New Post{% endblock %}</h1>
-{% endblock %}
-
-
-{% block content_head %}
-    <div id="content_head">xxx</div>
-{% endblock %}
-
-{% block content %}
-  <form method="post">
-    <label for="title">Title</label>
-    <input name="title" id="title" value="{{ request.form['title'] }}" required>
-    <label for="body">Body</label>
-    <textarea name="body" id="body">{{ request.form['body'] }}</textarea>
-    <label for="cat">Choose a category</label>
-    <select name="cat" id="cat">
-    {% for x in cat_list %}
-        <option value="{{x}}">{{x}}</option>
-    {% endfor %}
-    </select>
-    <input type="submit" value="Save">
-  </form>
-{% endblock %}
+<!doctype html>
+<html lang="en">
+        <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            <title>{% block title %}{% endblock %} - Zoomdora</title>
+            <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+            <!-- JS, Popper.js, and jQuery -->
+        <style>
+        div.grid-child.save {
+            float: left;
+            margin-right: 10px;
+        }
+        </style>
+        </head>
+        <body>
+        {% block style %}{% endblock %}
+        {% include 'nav_base.html' %}
+        <div class="container">
+            <header>
+                <div id="my_posting">
+                New Post
+                </div>
+            </header>
+        </div>
+        <div class="container">
+            <section class="content">
+              <form method="post">
+                <label for="title">Title</label>
+                <input name="title" id="title" value="{{ request.form['title'] }}" required>
+                <label for="body">Body</label>
+                <textarea name="body" id="body">{{ request.form['body'] }}</textarea>
+                <label for="cat">Choose a category</label>
+                <select name="cat" id="cat">
+                {% for x in cat_list %}
+                    <option value="{{x}}">{{x}}</option>
+                {% endfor %}
+                </select>
+                <div class="grid-container">
+                    <div class="grid-child save">
+                        <input type="submit" value="Save">
+                    </div>
+                    <div class="grid-child cancel">
+                        <input type="submit" value="Cancel">
+                    </div>
+                </div>
+              </form>
+            </section>
+        </div> <!--container body-->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    </body>
+</html>
 

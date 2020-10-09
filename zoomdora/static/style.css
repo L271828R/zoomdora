@@ -68,7 +68,9 @@ section.content {
   justify-content: center;
 }
 
-input.form-control { width: 400px!important; }
+input.form-control { 
+    width: 400px!important;
+}
 
 html {
   font-family: "Gotham SSm",Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"
@@ -196,3 +198,8 @@ input[type=submit] {
   align-self: start;
   min-width: 10em;
 }
+
+li.nav-item.my_postings {
+    width: 250px;
+}
+

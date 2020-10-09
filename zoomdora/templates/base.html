@@ -9,9 +9,11 @@
         <!-- JS, Popper.js, and jQuery -->
     </head>
     <body>
+        {% block style %}{% endblock %}
         <!--div class="container-fullwidth"-->
         {% include 'nav_base.html' %}
         <div class="container">
+            {% block post_button %}{% endblock %}
             <header>
               {% block header_1 %}{% endblock %}
             </header>
