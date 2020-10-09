@@ -12,6 +12,6 @@ htmlcov/
 dist/
 build/
 *.egg-info/
-../../.DS_Store
-../../schemaxxx.sql
+.DS_Store
+schemaxxx.sql
 *.swp
