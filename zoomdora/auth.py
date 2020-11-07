@@ -6,7 +6,10 @@ from flask import (
 from werkzeug.security import check_password_hash, generate_password_hash
 from zoomdora.db import get_db
 
-bp = Blueprint('auth', __name__, url_prefix='/auth')
+bp = Blueprint('auth', __name__, url_prefix='/auth', static_folder='static',
+                static_url_path='/')
+
+print('hello from AUTH')
 
 @bp.route('/register', methods=('GET', 'POST'))
 def register():
