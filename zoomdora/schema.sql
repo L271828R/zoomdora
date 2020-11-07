@@ -9,6 +9,7 @@ DROP TABLE IF EXISTS payment_methods;
 
 CREATE TABLE user (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
+  email TEXT,
   username TEXT UNIQUE NOT NULL,
   password TEXT NOT NULL,
   payment_method INTEGER,   
