@@ -1,7 +1,60 @@
 <!doctype html>
-<html lang="en">
-    <body style="background-color: grey;">
-        <h1>hello</h1>
-        <h1>{{ g.user['username'] }}</h1>
-    </body>
-</html>
+{% include 'nav_base.html' %}
+<style>
+    .haha {
+        border-style:solid;
+        border-width:1px;
+        border-color: black;
+    }
+    .spacer {
+        margin-top:80px;
+    }
+
+    @media (min-width: 1200px) {
+    .container{
+        max-width: 970px;
+    }
+
+    .bold {
+        font-weight: bold;
+    }
+
+    .box {
+        border-style: solid;
+        border-width: 2px;
+        border-bottom-width: 2px;
+        border-color: #e9e1e1;
+        min-height: 300px;
+        height: 300px;
+        margin: 5px 5px 5px 5px;
+    }
+}
+
+</style>
+<div class="container">
+    <div class="spacer"></div>
+    <div class="row">
+        <div class="col-3 haha">one</div>
+        <div class="col-9 haha">
+            <div class="box">
+                <div>
+                    <span class="bold">Email</span> 
+                </div>
+                <div>
+                    <span>{{ g.user['email'] }}</span> 
+                </div>
+                <div>
+                    <span class="bold">Username</span> 
+                </div>
+                <div>
+                    <span>{{ g.user['username'] }}</span> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
